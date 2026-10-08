@@ -1,0 +1,169 @@
+/* =========================================================
+   ABOUT PAGE STYLES - PARICHAY NASHA MUKTI KENDRA
+   ========================================================= */
+
+.about-page {
+  min-height: calc(100vh - 120px);
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  background: var(--bg-body);
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+}
+
+.about-images img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 3px solid #ffffff;
+  transition: var(--transition);
+}
+
+.about-images img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-images .img-big {
+  grid-row: span 2;
+  height: 480px;
+}
+
+.about-badge {
+  display: inline-block;
+  background: var(--primary-mint);
+  color: var(--primary-deep);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.about-content h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  color: var(--text-dark);
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-content h1 span {
+  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-content > p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 30px;
+}
+
+.about-content ul {
+  list-style: none;
+  margin-bottom: 35px;
+}
+
+.about-content ul li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 16px;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.about-content ul li svg {
+  color: var(--primary);
+  font-size: 20px;
+  min-width: 20px;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.about-stats div {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 24px 12px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.about-stats div:hover {
+  border-color: var(--primary-light);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-stats h2 {
+  color: var(--primary-deep);
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.about-stats p {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+@media (max-width: 950px) {
+  .about-page {
+    grid-template-columns: 1fr;
+    padding: 50px 6%;
+    gap: 45px;
+  }
+
+  .about-content h1 {
+    font-size: 34px;
+  }
+
+  .about-content > p {
+    font-size: 16.5px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .about-images {
+    grid-template-columns: 1fr;
+  }
+
+  .about-images .img-big,
+  .about-images img {
+    height: 250px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

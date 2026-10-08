@@ -1,0 +1,153 @@
+/* =========================================================
+   PARICHAY NASHA MUKTI KENDRA - MODERN DESIGN SYSTEM
+   Theme: Healing Forest Teal & Emerald with Warm Amber Accent
+   ========================================================= */
+
+:root {
+  /* Typography */
+  --font-main: 'Plus Jakarta Sans', 'Mukta', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Poppins', 'Mukta', sans-serif;
+  
+  /* Primary Healthcare & Rehabilitation Palette */
+  --primary-dark: #063426;      /* Deepest forest green */
+  --primary-deep: #0B4F3A;      /* Rich Teal Forest */
+  --primary: #0D7A5B;           /* Primary Teal Green */
+  --primary-light: #10B981;     /* Vibrant Emerald */
+  --primary-mint: #E6F7F0;      /* Soft Mint Tint */
+  --primary-subtle: #F0FDF4;    /* Subtle Background Green */
+  --primary-glow: rgba(16, 185, 129, 0.25);
+  
+  /* Accent & Action Palette */
+  --accent-amber: #D97706;      /* Trust & Care Amber */
+  --accent-amber-light: #FEF3C7;
+  --accent-amber-hover: #B45309;
+  
+  --accent-phone: #0284C7;      /* Emergency Blue */
+  --accent-phone-hover: #0369A1;
+  
+  --accent-whatsapp: #25D366;   /* WhatsApp Brand Green */
+  --accent-whatsapp-hover: #1EBE5A;
+  
+  /* Neutral Palette */
+  --bg-body: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-alt: #F1F5F9;
+  --bg-dark: #062319;
+  
+  --text-dark: #0F172A;         /* Slate 900 */
+  --text-heading: #1E293B;      /* Slate 800 */
+  --text-body: #334155;         /* Slate 700 */
+  --text-muted: #64748B;        /* Slate 500 */
+  --text-light: #94A3B8;        /* Slate 400 */
+  
+  --border-light: #E2E8F0;
+  --border-soft: #F1F5F9;
+  --border-active: #10B981;
+  
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 8px 24px -4px rgba(11, 79, 58, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 20px 40px -10px rgba(11, 79, 58, 0.12), 0 8px 20px -6px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 24px 48px -12px rgba(13, 122, 91, 0.2);
+  --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.3);
+  
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+  --radius-pill: 9999px;
+  
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  color: var(--text-body);
+  background-color: var(--bg-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+/* Selection */
+::selection {
+  background: var(--primary-mint);
+  color: var(--primary-dark);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Global Animations */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatAnimation 4s ease-in-out infinite;
+}

@@ -1,0 +1,156 @@
+/* =========================================================
+   BLOG DETAIL PAGE STYLES - PARICHAY NASHA MUKTI KENDRA
+   ========================================================= */
+
+.blog-detail-page {
+  background: var(--bg-body);
+  padding: 70px 8%;
+  min-height: calc(100vh - 120px);
+}
+
+.blog-detail-hero {
+  max-width: 950px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.blog-detail-hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.blog-detail-content {
+  padding: 50px;
+}
+
+.blog-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.blog-detail-content h1 {
+  font-size: 40px;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.article-block {
+  margin-bottom: 32px;
+}
+
+.article-block h2 {
+  font-size: 26px;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.article-block p {
+  font-size: 17.5px;
+  line-height: 1.85;
+  color: var(--text-body);
+}
+
+.article-cta {
+  margin-top: 50px;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-deep) 100%);
+  color: #ffffff;
+  box-shadow: var(--shadow-lg);
+}
+
+.article-cta h3 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.article-cta p {
+  font-size: 16.5px;
+  color: #d1fae5;
+  margin-bottom: 24px;
+}
+
+.article-cta div {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.article-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent-whatsapp);
+  color: #ffffff !important;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: var(--transition-fast);
+}
+
+.article-cta a:first-child {
+  background: #ffffff;
+  color: var(--primary-dark) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.article-cta a:hover {
+  transform: translateY(-2px);
+}
+
+.back-blog {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  color: var(--primary-deep);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+  transition: var(--transition-fast);
+}
+
+.back-blog:hover {
+  color: var(--primary-light);
+  transform: translateX(-4px);
+}
+
+@media (max-width: 700px) {
+  .blog-detail-hero img {
+    height: 250px;
+  }
+
+  .blog-detail-content {
+    padding: 28px;
+  }
+
+  .blog-detail-content h1 {
+    font-size: 28px;
+  }
+
+  .article-block h2 {
+    font-size: 22px;
+  }
+
+  .article-block p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,117 @@
+/* =========================================================
+   GALLERY PAGE STYLES - PARICHAY NASHA MUKTI KENDRA
+   ========================================================= */
+
+.gallery-page {
+  padding: 80px 8%;
+  background: var(--bg-body);
+  min-height: calc(100vh - 120px);
+}
+
+.gallery-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 50px;
+}
+
+.gallery-heading span {
+  display: inline-block;
+  background: var(--primary-mint);
+  color: var(--primary-deep);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.gallery-heading h1 {
+  font-size: 46px;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.gallery-heading h1 span {
+  color: var(--primary);
+}
+
+.gallery-heading p {
+  font-size: 18.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  transition: var(--transition);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(6, 35, 25, 0.9) 0%, rgba(6, 35, 25, 0.4) 60%, transparent 100%);
+  color: #ffffff;
+  transition: var(--transition);
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.gallery-card:hover .gallery-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-overlay h3 {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+@media(max-width:1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:700px) {
+  .gallery-heading h1 {
+    font-size: 34px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card img {
+    height: 250px;
+  }
+}
